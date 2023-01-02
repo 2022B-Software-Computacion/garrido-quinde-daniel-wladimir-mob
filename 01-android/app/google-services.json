@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "369185024124",
+    "project_id": "b-s-dwgq",
+    "storage_bucket": "b-s-dwgq.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369185024124:android:3040a1b8694a94bc3341f9",
+        "android_client_info": {
+          "package_name": "com.example.dwgaapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369185024124-gh82rqdj5umrl4pgsv3vdjbgecmo3beb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARPBNzUdtr41MwasB6Pya55uFYPolT4ro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369185024124-gh82rqdj5umrl4pgsv3vdjbgecmo3beb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

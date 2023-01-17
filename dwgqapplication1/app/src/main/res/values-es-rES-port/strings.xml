@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text" translatable="false">Hola mundo port</string>
+    <color name="color_bg">@color/black</color>
+    <color name="color_text">@color/teal_200</color>
+</resources>

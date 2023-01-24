@@ -10,9 +10,6 @@ class Alumno(
     public fun setCodigo(codigo:Int){
         this.codigoUnico=codigo;
     }
-    public fun getCodigo(): Int? {
-        return codigoUnico;
-    }
     public fun setNombre(nombre: String){
         this.nombre=nombre
     }
@@ -22,27 +19,19 @@ class Alumno(
     public fun setApellido(Apellido: String){
         this.apellido=Apellido
     }
-    public fun getApellido():String{
-        return apellido
-    }
+
     public fun setIRA(IRA: Double){
         this.IRA=IRA
     }
-    public fun getIRA():Double{
-        return IRA
-    }
+
     public fun setEsRepetido(repetido: Boolean){
         this.esRepetido=repetido
     }
-    public fun getEsRepetido():Boolean{
-        return this.esRepetido
-    }
+
     public fun setSexo(sexo: Char){
         this.sexo=sexo
     }
-    public fun getSexo():Char{
-        return this.sexo
-    }
+
 
     override fun toString(): String {
         return "$codigoUnico,$nombre,$apellido,$IRA,$esRepetido,$sexo"

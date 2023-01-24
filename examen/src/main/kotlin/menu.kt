@@ -33,7 +33,9 @@ public fun iniciarMenu(listaFacultades: ArrayList<Facultad>) {
 
         }
         4->{borrarFacultad(listaFacultades)}
-        5-> println("Gracias por preferirnos")
+        5->{println("Gracias por preferirnos")
+            escribirDatos(listaFacultades)
+        }
         else -> {
             println("Error")
             iniciarMenu(listaFacultades)
@@ -299,29 +301,37 @@ public fun modificarAlumnos(listaFacultades: ArrayList<Facultad>,valorFacultad:I
                         val aux = readLine()!!.toInt()
                         alumnoCambiar?.setCodigo(aux)
                         println("cambio con exito")
+                        iniciarMenu(listaFacultades)
                     }
                     2->{
                         println("Ingrese el nuevo nombre: ")
                         val aux = readLine()!!.toString()
                         alumnoCambiar?.setNombre(aux)
                         println("cambio con exito")
+                        iniciarMenu(listaFacultades)
                     }
                     3->{println("Ingrese el nuevo apellido: ")
                         val aux = readLine()!!.toString()
                         alumnoCambiar?.setApellido(aux)
-                        println("cambio con exito")}
+                        println("cambio con exito")
+                        iniciarMenu(listaFacultades)
+                    }
+
                     4->{println("Ingrese el nuevo IRA: ")
                         val aux = readLine()!!.toDouble()
                         alumnoCambiar?.setIRA(aux)
-                        println("cambio con exito")}
+                        println("cambio con exito")
+                        iniciarMenu(listaFacultades)}
                     5->{println("Ingrese si el almuno es repetido (true/false: ")
                         val aux = readLine()!!.toBoolean()
                         alumnoCambiar?.setEsRepetido(aux)
-                        println("cambio con exito")}
+                        println("cambio con exito")
+                        iniciarMenu(listaFacultades)}
                     6->{println("Ingrese el sexo (h/m): ")
                         val aux = readLine()!!.toCharArray()[0]
                         alumnoCambiar?.setSexo(aux)
-                        println("cambio con exito")}
+                        println("cambio con exito")
+                        iniciarMenu(listaFacultades)}
                 }
             }
             2->{listaFacultades[valorFacultad].getListaAlumnos()?.removeAt(valorAlumno)

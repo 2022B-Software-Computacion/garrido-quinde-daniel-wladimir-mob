@@ -30,25 +30,25 @@ class Facultad(
     public fun escribir(): String {
         val lista =escribirAlumnos()
         return "$nombre,$codigo,$promedioDeReprobados,$tieneMaestrias,$fechaDeInaguracion,$lista"
-    }
+}
 
-    public fun printAlumnos():String{
-        var alumnosLista=""
-        listaAlumnos?.forEach { alumno: Alumno ->
-            alumnosLista += alumno.imprimir()
-        }
-        return alumnosLista
+public fun printAlumnos():String{
+    var alumnosLista=""
+    listaAlumnos?.forEach { alumno: Alumno ->
+        alumnosLista += alumno.imprimir()
     }
+    return alumnosLista
+}
 
-    public fun setFechaInaguracion(fechaDeInaguracion: LocalDate){
-        this.fechaDeInaguracion=fechaDeInaguracion
-    }
-    public fun getFechaInaguracion():LocalDate{
-        return this.fechaDeInaguracion
-    }
-    public fun getListaAlumnos(): ArrayList<Alumno>? {
-        return this.listaAlumnos
-    }
+public fun setFechaInaguracion(fechaDeInaguracion: LocalDate){
+    this.fechaDeInaguracion=fechaDeInaguracion
+}
+public fun getFechaInaguracion():LocalDate{
+    return this.fechaDeInaguracion
+}
+public fun getListaAlumnos(): ArrayList<Alumno>? {
+    return this.listaAlumnos
+}
 
 
 

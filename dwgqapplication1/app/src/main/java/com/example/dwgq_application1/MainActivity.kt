@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Base de datos
-        
+        EBaseDeDatos.TablaEntrenador = ESqliteHelperEntrenador(this)
 
 
         val botonCicloVida = findViewById<Button>(R.id.btn_ciclo_vida)
@@ -80,6 +80,11 @@ class MainActivity : AppCompatActivity() {
         val botonIntent = findViewById<Button>(R.id.btn_intent)
         botonIntent.setOnClickListener {
             abrirActividadConParametros(CIntentExplicitoParametros::class.java)
+        }
+
+        val botonSQLlite = findViewById<Button>(R.id.btn_sqllite)
+        botonSQLlite.setOnClickListener {
+            irActividad(ECrudEntrenador::class.java)
         }
     }
 

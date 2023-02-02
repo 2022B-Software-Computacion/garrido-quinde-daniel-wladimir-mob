@@ -1,4 +1,4 @@
-Social,1,6.5,false,2022-12-31,5,ariel,Garrido,7.89,false,M,6,ariel,Garrido,7.89,false,M,7,ariel,Garrido,7.89,false,M,8,ariel,Garrido,7.89,false,M,
-Jurisprudencia,1,6.5,false,2022-12-31,5,juan,Garrido,7.89,false,M,6,juan,Garrido,7.89,false,M,7,juan,Garrido,7.89,false,M,8,juan,Garrido,7.89,false,M,
-leyes2,1,6.5,false,2022-12-31,6,juan,Garrido,7.89,false,M,7,juan,Garrido,7.89,false,M,8,juan,Garrido,7.89,false,M,12,daniel,garrido,8.5,false,h,
-leyes,12,5.8,true,2022-03-03,1,juan,perez,8.5,true,h,
+Sistemas,12,5.6,true,2022-12-31,1,Daniel,Garrido,7.89,false,M,2,Daniel2,Garrido1,7.89,false,M,3,Daniel3,Garrido2,7.89,false,M,4,Daniel4,Garrido3,7.89,false,M,
+Social,1,6.5,false,2022-12-31,5,ariel,Garrido,7.89,false,M,6,ariel,Garrido,7.89,false,M,8,ariel,Garrido,7.89,false,M,
+Jurisprudencia,1,6.5,false,2022-12-31,5,juan,Garrido,9.5,false,M,6,juan,Garrido,7.89,false,M,7,juan,Garrido,7.89,false,M,8,juan,Garrido,7.89,false,M,
+leyes,12,2.5,false,2022-02-03,12,daniel,garrido,8.5,false,h,

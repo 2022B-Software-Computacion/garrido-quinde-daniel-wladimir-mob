@@ -7,18 +7,19 @@
 
     <Button
         android:id="@+id/btn_dar_like"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_width="109dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="56dp"
         android:text="LIKE"
         app:layout_constraintEnd_toEndOf="@+id/tv_cedula"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="@+id/tv_cedula"
         app:layout_constraintTop_toBottomOf="@+id/tv_cedula" />
 
     <TextView
         android:id="@+id/tv_nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="61dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="44dp"
         android:text="Nombre"
         app:layout_constraintBottom_toBottomOf="@+id/tv_cedula"
@@ -28,8 +29,8 @@
 
     <TextView
         android:id="@+id/tv_cedula"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="33dp"
         android:text="Cedula"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +40,8 @@
 
     <TextView
         android:id="@+id/tv_likes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
         android:layout_marginStart="60dp"
         android:text="Likes"
         app:layout_constraintBottom_toBottomOf="@+id/tv_cedula"

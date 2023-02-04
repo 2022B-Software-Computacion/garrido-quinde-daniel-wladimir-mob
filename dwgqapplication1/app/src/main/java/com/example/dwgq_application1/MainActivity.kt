@@ -1,5 +1,6 @@
 package com.example.dwgq_application1
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -50,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -90,6 +92,11 @@ class MainActivity : AppCompatActivity() {
         val botonRecyclerView = findViewById<Button>(R.id.btn_revcycler_viewv)
         botonRecyclerView.setOnClickListener {
             irActividad(GRecyclerView::class.java)
+        }
+
+        val botonMaps = findViewById<Button>(R.id.btn_google_maps)
+        botonMaps.setOnClickListener {
+            irActividad(HGoogleMapsActivity::class.java)
         }
     }
 

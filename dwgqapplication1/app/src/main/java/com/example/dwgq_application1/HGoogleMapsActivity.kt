@@ -1,10 +1,12 @@
 package com.example.dwgq_application1
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -16,11 +18,23 @@ class HGoogleMapsActivity : AppCompatActivity() {
     private lateinit var mapa:GoogleMap
     var permisos = false
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hgoogle_maps2)
         solicitarPermisos()
         iniciarLogicaMapa()
+
+        val btonCarolina = findViewById<Button>(R.id.btn_ir_carolina)
+        btonCarolina.setOnClickListener {
+            irCarolina()
+        }
+    }
+
+    fun irCarolina(){
+        val posicion = LatLng(0.2878447270285614, -78.53531263674577)
+        val zoom = 17f
+        moverCamaraConZoom(posicion,zoom)
     }
 
     fun iniciarLogicaMapa(){

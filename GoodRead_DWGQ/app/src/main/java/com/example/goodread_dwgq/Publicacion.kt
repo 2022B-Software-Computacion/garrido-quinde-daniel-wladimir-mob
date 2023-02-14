@@ -4,10 +4,10 @@ import android.os.Parcel
 import android.os.Parcelable
 
 class Publicacion (
-    private var id:Int,
-    private var lector: Lector?,
-    private var libro: Libro?,
-    private var comentario:String?
+     var id:Int,
+     var lector: Lector?,
+     var libro: Libro?,
+     var comentario:String?
         ):Parcelable{
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
@@ -39,4 +39,3 @@ class Publicacion (
     }
 }
 
-}

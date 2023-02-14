@@ -4,23 +4,21 @@ import android.os.Parcel
 import android.os.Parcelable
 
 class Lector(
-    private var id:Int,
-    private var nombre:String?,
-    private var librosLeidos: Parcelable?
+     var id:Int,
+     var nombre:String?,
+     var librosLeidos: ArrayList<Libro>?
 ):Parcelable {
-    constructor(parcel: Parcel):this(
+    constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString(),
-        parcel.readParcelable(Libro::class.java.classLoader)
-        ){
-
+        parcel.readArrayList(Libro::class.java.classLoader) as ArrayList<Libro>?
+    ) {
     }
-    
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id)
         parcel.writeString(nombre)
-        parcel.writeParcelable(librosLeidos,flags)
+        parcel.writeArray(arrayOf(Libro::class.java.classLoader)) as ArrayList<Libro>
     }
 
     override fun describeContents(): Int {
@@ -36,4 +34,5 @@ class Lector(
             return arrayOfNulls(size)
         }
     }
+
 }

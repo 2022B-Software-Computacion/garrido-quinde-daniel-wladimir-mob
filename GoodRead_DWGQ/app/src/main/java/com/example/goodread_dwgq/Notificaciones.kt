@@ -1,16 +1,13 @@
 package com.example.goodread_dwgq
-
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class Notificaciones : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_notificaciones)
 
         //definir lista
         val listaPublicaciones = arrayListOf<Publicacion>()
@@ -20,33 +17,18 @@ class MainActivity : AppCompatActivity() {
         listaPublicaciones.add(
             Publicacion(2, Lector(2,"Juan",null),libro,"comentario2")
         )
-
-        //init recycler view
-        val recyclerView = findViewById<RecyclerView>(R.id.rv_home)
+        //init
+        val recyclerView = findViewById<RecyclerView>(R.id.rv_notifi)
         inicializarRecyclerView(listaPublicaciones,recyclerView)
-
-        val botonNotifi = findViewById<Button>(R.id.btn_notificaciones)
-        botonNotifi.setOnClickListener {
-            irActividad(Notificaciones::class.java)
-
-        val botnMislibros = findViewById<Button>(R.id.btn_my_books)
-        botnMislibros.setOnClickListener { irActividad(mis_libros::class.java) }
-        }
     }
 
+
     fun inicializarRecyclerView(listaPublicaciones: ArrayList<Publicacion>, recyclerView: RecyclerView) {
-        val adaptador = home_recycler_adapter(this,listaPublicaciones,recyclerView)
+        val adaptador = adaptadorNotificaciones(this,listaPublicaciones,recyclerView)
         recyclerView.adapter=adaptador
         recyclerView.itemAnimator=androidx.recyclerview.widget.DefaultItemAnimator()
         recyclerView.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         adaptador.notifyDataSetChanged()
-    }
-
-    fun irActividad(
-        clase: Class<*>
-    ) {
-        val intent = Intent(this,clase)
-        startActivity(intent)
     }
 
 }

@@ -38,7 +38,7 @@ class adaptador_mis_libros (
     override fun onBindViewHolder(holder: MyviewHolder, position: Int) {
         val galeriaActual = this.listaLectores[position] //lista de lectores
         var imagaen = valorRandom2()
-        holder.nombreGal.text = "Libros por leer"
+        holder.nombreGal.text = galeriaActual.librosLeidos?.get(0)?.descripcion ?: String()
         holder.comentGal.text = "${valorRandom()} libros"
         when(imagaen){
                 1->{
@@ -56,6 +56,16 @@ class adaptador_mis_libros (
                     holder.img2.setImageResource(R.drawable.l7)
                     holder.img3.setImageResource(R.drawable.l6)
                 }
+            4->{
+                holder.img1.setImageResource(R.drawable.l2)
+                holder.img2.setImageResource(R.drawable.l8)
+                holder.img3.setImageResource(R.drawable.l3)
+            }
+            5->{
+                holder.img1.setImageResource(R.drawable.l4)
+                holder.img2.setImageResource(R.drawable.l7)
+                holder.img3.setImageResource(R.drawable.l3)
+            }
         }
 
     }

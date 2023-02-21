@@ -42,6 +42,11 @@ class adaptadorNotificaciones(
             2 -> holder.imagen.setImageResource(R.drawable.l2)
             3->holder.imagen.setImageResource(R.drawable.l3)
             4->holder.imagen.setImageResource(R.drawable.l4)
+            5->holder.imagen.setImageResource(R.drawable.l1)
+            6->holder.imagen.setImageResource(R.drawable.l6)
+            7->holder.imagen.setImageResource(R.drawable.l7)
+            8->holder.imagen.setImageResource(R.drawable.l8)
+            9->holder.imagen.setImageResource(R.drawable.l9)
             else -> holder.imagen.setImageResource(R.drawable.l5)
         }
     }

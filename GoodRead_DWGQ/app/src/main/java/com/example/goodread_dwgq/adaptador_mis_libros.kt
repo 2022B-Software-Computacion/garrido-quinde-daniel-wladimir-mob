@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import kotlin.random.Random
 
 class adaptador_mis_libros (
     val contexto: mis_libros,
-    val listaLibros: ArrayList<Lector>,
+    val listaLectores: ArrayList<Lector>,
     val recyclerView: RecyclerView
         ): RecyclerView.Adapter<adaptador_mis_libros.MyviewHolder>(){
     inner class MyviewHolder(view: View):RecyclerView.ViewHolder(view){
@@ -35,17 +36,40 @@ class adaptador_mis_libros (
     }
 
     override fun onBindViewHolder(holder: MyviewHolder, position: Int) {
-        val galeriaActual = this.listaLibros[position] //lista de lectores
+        val galeriaActual = this.listaLectores[position] //lista de lectores
+        var imagaen = valorRandom2()
         holder.nombreGal.text = "Libros por leer"
-        holder.comentGal.text = "${this.listaLibros.size} libros"
-        holder.img1.setImageResource(R.drawable.ejemplo)
-        holder.img2.setImageResource(R.drawable.ejemplo)
-        holder.img3.setImageResource(R.drawable.ejemplo)
+        holder.comentGal.text = "${valorRandom()} libros"
+        when(imagaen){
+                1->{
+                holder.img1.setImageResource(R.drawable.l1)
+                holder.img2.setImageResource(R.drawable.l9)
+                holder.img3.setImageResource(R.drawable.l2)
+                }
+                2->{
+                    holder.img1.setImageResource(R.drawable.l3)
+                    holder.img2.setImageResource(R.drawable.l8)
+                    holder.img3.setImageResource(R.drawable.l4)
+                }
+                3->{
+                    holder.img1.setImageResource(R.drawable.l5)
+                    holder.img2.setImageResource(R.drawable.l7)
+                    holder.img3.setImageResource(R.drawable.l6)
+                }
+        }
+
     }
 
     override fun getItemCount(): Int {
-        return this.listaLibros.size
+        return this.listaLectores.size
     }
 
+    fun valorRandom():Int{
+       return Random.nextInt(3,15)
+    }
+
+    fun valorRandom2():Int{
+        return Random.nextInt(1,3)
+    }
 
 }

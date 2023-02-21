@@ -3,93 +3,115 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
+        android:layout_width="130dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383"
-        tools:srcCompat="@drawable/ejemplo" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_Lector"
+        app:layout_constraintBottom_toTopOf="@id/btn_like"
+        tools:srcCompat="@drawable/l1" />
 
     <Button
         android:id="@+id/btn_like"
-        android:layout_width="88dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/boton"
-        android:radius="10dp"
         android:text="Like"
         android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toStartOf="@id/btn_comentario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+
+        />
 
     <Button
         android:id="@+id/btn_comentario"
-        android:layout_width="122dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="60dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/boton"
-        android:radius="10dp"
         android:text="Commentario"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_like"
+        android:layout_marginTop="245dp"
+        android:layout_marginEnd="8dp"
+
+        />
+
 
     <TextView
         android:id="@+id/tv_Lector"
-        android:layout_width="179dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:text="Lector"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
 
     <TextView
         android:id="@+id/tv_libro_titulo"
-        android:layout_width="121dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="124dp"
-        android:text="Libro"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Libro Ejemplo"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="65dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="8dp"
+        />
 
     <TextView
         android:id="@+id/tv_autor"
-        android:layout_width="103dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:text="Autor"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/tv_libro_titulo" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="by Daniel W. Garrido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_libro_titulo"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="8dp"
+        />
 
     <Button
         android:id="@+id/btn_want_read"
-        android:layout_width="107dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/ex"
-        android:color="@color/green_read"
-        android:radius="10dp"
-        android:text="Want "
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/green_read"
+        android:text="Want to read"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/tv_autor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_autor"
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="110dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

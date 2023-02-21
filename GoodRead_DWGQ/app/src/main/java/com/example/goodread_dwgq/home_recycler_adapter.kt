@@ -1,7 +1,9 @@
 package com.example.goodread_dwgq
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +11,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+
 
 class home_recycler_adapter(
     val contexto: MainActivity,
@@ -32,14 +35,20 @@ class home_recycler_adapter(
             btnWantRead = view.findViewById(R.id.btn_want_read)
             btnComent = view.findViewById(R.id.btn_comentario)
             btnLike = view.findViewById(R.id.btn_like)
-            btnLike.setOnClickListener { cambiarColor() }
+            btnLike.setOnClickListener { meGusta()}
             img = view.findViewById(R.id.imageView)
             nombreLectorTextView.setTextColor(R.color.text_user_home)
             btnWantRead.setTextColor(Color.WHITE)
         }
 
-        private fun cambiarColor(){
-            btnLike.setBackgroundColor(R.drawable.ex)
+        fun meGusta(){
+            if (btnLike.currentTextColor==Color.BLACK){
+                btnLike.setBackgroundResource(R.drawable.boton_verde)
+                btnLike.setTextColor(Color.WHITE)
+            }else{
+                btnLike.setBackgroundResource(R.drawable.boton)
+                btnLike.setTextColor(Color.BLACK)
+            }
         }
 
     }
@@ -54,13 +63,22 @@ class home_recycler_adapter(
 
     override fun onBindViewHolder(holder: MyviewHolder, position: Int) {
        val publicacionActual = this.listaPublicaciones[position]
-        holder.nombreLectorTextView.text = publicacionActual.lector?.nombre ?: String()
+        holder.nombreLectorTextView.text = "${publicacionActual.lector?.nombre ?: String()} gave 2 stars to " +
+                "${publicacionActual.libro?.nombre ?: String()} by ${publicacionActual.libro?.autor ?: String()}"
         holder.nombreAutorTextView.text = publicacionActual.libro?.autor ?: String()
-        holder.nombreLibroTextView.text = publicacionActual.libro?.nombre ?: String()
-        holder.img.setImageResource(R.drawable.ejemplo)
+        holder.nombreLibroTextView.text = "by ${publicacionActual.libro?.nombre ?: String()}"
+        //holder.img.setImageResource()
+        when (position){
+            1 ->holder.img.setImageResource(R.drawable.l1)
+            2 -> holder.img.setImageResource(R.drawable.l2)
+            3->holder.img.setImageResource(R.drawable.l3)
+            4->holder.img.setImageResource(R.drawable.l4)
+            else -> holder.img.setImageResource(R.drawable.l5)
+        }
     }
 
     override fun getItemCount(): Int {
         return this.listaPublicaciones.size
     }
+
 }

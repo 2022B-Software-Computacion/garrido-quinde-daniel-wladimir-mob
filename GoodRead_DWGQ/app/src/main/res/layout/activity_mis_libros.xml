@@ -6,23 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".mis_libros">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_mis_libros"
-        android:layout_width="417dp"
-        android:layout_height="561dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.701" />
 
-    <Button
-        android:id="@+id/btn_home_mis_libros"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imageView2"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:paddingTop="15dp"
+        android:background="@color/fondoApp"
+        android:text="Mis libros"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="161dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        app:srcCompat="@drawable/ejemplo" />
+
+    <TextView
+        android:id="@+id/tv_progreso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Home"
+        android:layout_marginStart="8dp"
+        android:text="Progreso: 75%"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:text="El camino del rey"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb_mis_libros"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:max="100"
+        android:progress="75"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@id/tv_progreso" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_mis_libros"
+        android:layout_width="413dp"
+        android:layout_height="568dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_update_progress"
+        android:layout_marginTop="70dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_update_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:text="Actualizar Progreso"
+        app:layout_constraintTop_toBottomOf="@id/pb_mis_libros"
+        app:layout_constraintStart_toEndOf="@id/imageView2"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/boton"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

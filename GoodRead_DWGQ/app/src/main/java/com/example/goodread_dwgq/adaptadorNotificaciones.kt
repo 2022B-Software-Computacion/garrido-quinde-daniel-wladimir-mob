@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class adaptadorNotificaciones(
         val contexto: Notificaciones,
-        val listaNotificaciones: ArrayList<Publicacion>,
+        val listaLibros: ArrayList<Libro>,
         val recyclerView: RecyclerView
     ):RecyclerView.Adapter<adaptadorNotificaciones.MyviewHolder>() {
     inner class MyviewHolder(view: View):RecyclerView.ViewHolder(view){
@@ -34,13 +34,19 @@ class adaptadorNotificaciones(
     }
 
     override fun onBindViewHolder(holder: MyviewHolder, position: Int) {
-        val notifiActual = this.listaNotificaciones[position]
-        holder.nombre.text = notifiActual.lector?.nombre ?: String()
-        holder.descripcion.text = notifiActual.libro?.descripcion ?: String()
-        holder.imagen.setImageResource(R.drawable.user)
+        val notifiActual = this.listaLibros[position]
+            holder.nombre.text = notifiActual.autor
+        holder.descripcion.text = notifiActual.descripcion
+        when (position){
+            1 ->holder.imagen.setImageResource(R.drawable.l1)
+            2 -> holder.imagen.setImageResource(R.drawable.l2)
+            3->holder.imagen.setImageResource(R.drawable.l3)
+            4->holder.imagen.setImageResource(R.drawable.l4)
+            else -> holder.imagen.setImageResource(R.drawable.l5)
+        }
     }
 
     override fun getItemCount(): Int {
-        return this.listaNotificaciones.size
+        return this.listaLibros.size
     }
 }

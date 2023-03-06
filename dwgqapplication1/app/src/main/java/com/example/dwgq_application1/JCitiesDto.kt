@@ -9,6 +9,6 @@ class JCitiesDto(
     public var regions:List<String>?
 ) {
     override fun toString(): String {
-        return "JCitiesDto(name=$name, country=$country)"
+        return "${name} - ${country}"
     }
 }

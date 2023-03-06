@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        Log.i("s","se carga una vez")
         //Base de datos
         EBaseDeDatos.TablaEntrenador = ESqliteHelperEntrenador(this)
 
@@ -101,9 +101,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         val botonFireStore = findViewById<Button>(R.id.btn_intent_firestore)
-        botonFirebase.setOnClickListener {
+        botonFireStore.setOnClickListener {
             irActividad(JFirebaseFirestore::class.java)
         }
+
+        val botonExamen = findViewById<Button>(R.id.btn_examen)
+        botonExamen.setOnClickListener { irActividad(Entrenador::class.java) }
     }
 
 

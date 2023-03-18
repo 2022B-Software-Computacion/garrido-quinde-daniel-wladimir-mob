@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "193984387509",
+    "project_id": "dwgqexamenalumnofacultad",
+    "storage_bucket": "dwgqexamenalumnofacultad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193984387509:android:8ac179b5d1d73543b561fc",
+        "android_client_info": {
+          "package_name": "com.example.pokemoexamen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193984387509-v32uf24grqqugi2lolo06iab46qpn2mi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY9JW6WKO8CTUowOAJisitgBU_6V82WgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193984387509-v32uf24grqqugi2lolo06iab46qpn2mi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
